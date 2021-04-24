@@ -58,14 +58,17 @@ const userPrompt = () => {
 }
 
 // TODO: Create a function to write README file
-const.writeReadme = () =>
+const.writeReadme = (data) => {
+  fs.writeFile('README.md', data, (error) =>
+  error ? console.log('Error!') : console.log('Success!'));
+}
 
 
 
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() => {}
 );
 // Function call to initialize app
 init();
