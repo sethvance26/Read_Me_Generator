@@ -12,10 +12,39 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 const markdown = (data) => {
-  const 
-  const
-  return`
 
+
+
+  return`
+# Project Name:
+${data.projectname}
+
+## License
+${licensetype} : [View License](${licenseLinkURL})
+
+
+## Table of Contents
+- [Title](#Project-Name)
+- [License](#License)
+- [Installation](#Installation)
+- [Usage](#Usage)
+
+## Contact
+[Email]-(${email})
+[GitHub]-(${github})
+($)
+
+## Installation 
+  \`npm i\`
+
+## Usage
+helo
+
+# Titles 
+test
+`;
 }
+
+
 
 module.exports = generateMarkdown;
