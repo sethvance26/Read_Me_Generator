@@ -19,9 +19,14 @@ const questions = [
     },
     {
         type:'input',
-        message: 'What is your Github username?',
-        name: 'github',
+        message: 'What is the repo URL?',
+        name: 'repo',
     },
+    {
+      type:'input',
+      message: 'What is your github username?',
+      name: 'github',
+  },
     {
         type:'input',
         message: 'What is your e-mail?',
@@ -31,7 +36,7 @@ const questions = [
         type: 'list',
         name: 'licensetype',
         message: 'What kind of license should your project have?',
-        choices: ["MIT", "ISC"],
+        choices: ["MIT", "Mozilla", 'Apache', ],
     },
     {
         type: 'input',
@@ -45,13 +50,13 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'need to know',
+        name: 'usage',
         message: 'What does the user need to know about using the repo?',
       },
       {
         type: 'input',
         name: 'contributions',
-        message: 'What does the user need to know about contributing to the repo?',
+        message: 'What guidelines are there for using the repo?',
       },
 ];
 

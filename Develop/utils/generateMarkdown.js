@@ -13,35 +13,47 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (userInput) => {
 
-  const { projectname, email, github } = userInput;
+  const { projectname, email, github, description, usage, licensetype, test, install, contributions, repo } = userInput;
 
 
   return`
-# Project Name:
+
+# License
+${licensetype}
+## Project Name:
 ${projectname}
-
-## License
-
 
 ## Table of Contents
 - [Title](#Project-Name)
+- [Description](#Description)
 - [License](#License)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Tests](#Tests)
+- [Contributions](#Contributions)
+- [Questions](#Questions)
+
+## Description
+${description}
 
 ## Contact
 [Email]-(${email})
-[GitHub]-(${github})
-($)
+[GitHub]-(${repo})
 
-## Installation 
-  \`npm i\`
+## Tests
+To run a test, use the command ${test}
 
 ## Usage
-helo
+${usage}${github}
 
-# Titles 
-test
+
+## Installation
+${install}
+
+##Contributions
+${contributions}
+### Questions
+If you have any questions or concerns, please e-mail me at ${email}. More work can be found at my Github here - ${github} 
 `;
 }
 
