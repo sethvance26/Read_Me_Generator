@@ -10,7 +10,7 @@ const renderLicenseBadge = (license) => {
     case 'Mozilla':
       licenseBadge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
       break; 
-    case 'Apache 2.0':
+    case 'Apache License 2.0':
       licenseBadge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
       break;
     case 'None':
@@ -29,7 +29,10 @@ function renderLicenseLink = (license) => {
   switch (license) {
     case 'MIT':
       licenseURL = 'https://opensource.org/licenses/MIT';
-
+      break;
+    case 'Apache License 2.0':
+      licenseURL = 'https://opensource.org/licenses/Apache-2.0';
+    break;
   }
 }
 
