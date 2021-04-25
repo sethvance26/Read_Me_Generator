@@ -25,15 +25,24 @@ const renderLicenseBadge = (license) => {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 let licenseURL;
-function renderLicenseLink = (license) => {
+const renderLicenseLink = (license) => {
+ 
   switch (license) {
     case 'MIT':
       licenseURL = 'https://opensource.org/licenses/MIT';
       break;
+    case 'Mozilla':
+      licenseURL = 'https://opensource.org/licenses/MPL-2.0';
+      break;
     case 'Apache License 2.0':
       licenseURL = 'https://opensource.org/licenses/Apache-2.0';
-    break;
+      break;
+    case 'None':
+        licenseURL = '';
+        break;
   }
+  return licenseURL;
+
 }
 
 // TODO: Create a function that returns the license section of README
