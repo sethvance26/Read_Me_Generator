@@ -50,4 +50,10 @@ Here our policy is: If you break it, you buy it!
 ### Questions
 If you have any questions or concerns, please e-mail me at sethvance26@gmail.com. More work can be found at my Github. Username -  sethvance26 
 
+#### Final Notes
+![HW EXAMPLE](https://user-images.githubusercontent.com/76290048/115978435-5e69f800-a54d-11eb-9ba2-a236dc538cb1.PNG)
 
+As always, we were told to link our page up with GitHub Pages, and provide a link for the live website as well as an image of our finished product. (Shown above.)
+
+Deployed Link - https://sethvance26.github.io/Read_Me_Generator/
+Video Walkthrough of Application - https://drive.google.com/file/d/1jjy0_BbZCEIzjKOJNqdoeMrlfG9XNy-B/view
