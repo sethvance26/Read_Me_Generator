@@ -1,11 +1,12 @@
-// TODO: Include packages needed for this application
+// These are the packages needed for this application. 
+//We use inquirer for our prompts, fs for writing a new file, and generateMarkdown so we can import the code from generateMarkdown.js
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 
 
-// TODO: Create an array of questions for user input
+// This is an array of questions that we call with Inquirer to prompt the User.
 const questions = [
     {
         type:'input',
@@ -34,7 +35,7 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'licensetype',
+        name: 'license',
         message: 'What kind of license should your project have?',
         choices: ["MIT", "Mozilla", 'Apache License 2.0', ],
     },
@@ -60,7 +61,7 @@ const questions = [
       },
 ];
 
-
+//Here we're turning our questions array into an inquirer prompt function, so that our application will prompt the user with questions. 
 const userPrompt = () => {
   return inquirer.prompt(questions)
 }
@@ -68,7 +69,7 @@ const userPrompt = () => {
 
 
 
-// TODO: Create a function to write README file
+//This function writes a new README.md file and displays "Sucessful!" if it worked correctly, and "Error" if there was an issue. 
 const writeReadme = (data) => {
   fs.writeFile('README.md', data, (error) =>
   error ? console.log('Error!') : console.log('Successful!'));
@@ -79,7 +80,7 @@ const writeReadme = (data) => {
 
 
 
-// TODO: Create a function to initialize app
+//This function initializes our application and tells the userPrompt function to run first, then takes that data generates a markdown, and writes the README with that information. 
 const init = () => {
 userPrompt()
   .then((data) => {

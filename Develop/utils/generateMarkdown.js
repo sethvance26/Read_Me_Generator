@@ -1,6 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 
+
+
+//This function returns a license badge based on the User's selection of license within the Inquirer prompts. 
+//If there is no license specified, it returns an empty string.
 const renderLicenseBadge = (license) => {
   let licenseBadge;
   switch (license) {
@@ -20,10 +22,11 @@ const renderLicenseBadge = (license) => {
     return licenseBadge;
 }
 
- 
-  
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
+
+//This function returns a license link corresponding to the user's choice of license. 
+//We make a switch statement since we have different defined cases.
+//If no license is selected, it will return an empty string
 
 const renderLicenseLink = (license) => {
  let licenseURL;
@@ -46,20 +49,24 @@ const renderLicenseLink = (license) => {
 }
 
 
+//This function creates the README file from the user's data that they provide in the prompts given to the user with Inquirer. 
 
-
-// TODO: Create a function to generate markdown for README
 const generateMarkdown = (userInput) => {
 
-  const { projectname, email, github, description, usage, licensetype, test, install, contributions, repo } = userInput;
+  const { projectname, email, github, description, usage, license, test, install, contributions, repo } = userInput;
 
   let licenseBadge = renderLicenseBadge(license);
   let licenseURL = renderLicenseLink(license);
 
+
+
+
+//This is the actual README that will be built once the generateMarkdown function runs. 
   return`
 
 # License
-${licenseBadge} : [View License](${licenseURL})
+${licenseBadge}
+  This project is licensed under the ${license} license. URL Here - (${licenseURL})
 ## Project Name:
 ${projectname}
 
@@ -101,6 +108,8 @@ If you have any questions or concerns, please e-mail me at ${email}. More work c
 };
 
 
+
+//This exports our code to be used by Index.js
 
 module.exports = {
   generateMarkdown
