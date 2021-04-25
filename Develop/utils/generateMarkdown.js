@@ -85,14 +85,14 @@ ${description}
 
 ## Contact
 [Email]-(${email})
-[GitHub]-(${repo})
+[GitHub]-(${github})
 
 ## Tests
 To run a test, use the command ${test}
 
 ## Usage
 ${usage}
-${github}
+${repo}
 
 
 ## Installation
