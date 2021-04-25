@@ -44,7 +44,8 @@ ${description}
 To run a test, use the command ${test}
 
 ## Usage
-${usage}${github}
+${usage}
+${github}
 
 
 ## Installation
@@ -52,8 +53,10 @@ ${install}
 
 ##Contributions
 ${contributions}
+
+
 ### Questions
-If you have any questions or concerns, please e-mail me at ${email}. More work can be found at my Github here - ${github} 
+If you have any questions or concerns, please e-mail me at ${email}. More work can be found at my Github. Username -  ${github} 
 `;
 }
 
